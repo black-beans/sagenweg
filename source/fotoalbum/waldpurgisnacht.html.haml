@@ -1,0 +1,112 @@
+!!!
+%html
+  %head
+    %title Freiämter Sagenweg - Fotoalbum
+    %meta{content: "Freiämter Sagenweg", name: "description"}/
+    %meta{content: "sagen, freiamt, aargau, wohlen", name: "keywords"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "index,follow", name: "Robots"}/
+    %meta{content: "Michael Kessler - www.netzpiraten.ch", name: "Developer"}/
+    %link{href: "../css/screen.css", media: "screen, projection", rel: "stylesheet", type: "text/css"}/
+    %link{href: "../css/print.css", media: "print, projection", rel: "stylesheet", type: "text/css"}/
+    /[if lt IE 8]
+      <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    %link{href: "../css/slimbox2.css", media: "screen, projection", rel: "stylesheet", type: "text/css"}/
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28630599-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    %script{src: "http://use.typekit.com/rgn5szp.js", type: "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    %script{src: "http://cdn.sublimevideo.net/js/z5p3m0es.js", type: "text/javascript"}
+  %body
+    #container
+      #header
+      %a{href: "../index.html"}
+        #logo
+      %a{href: "../index.html"}
+        #sagenweg
+      #content
+        #page.fotoalbum
+          %h1 Fotoalbum
+          %h2 Waldpurgisnacht
+          %p
+          .gallery
+            .container
+              .thumb
+                %a{href: "../galleries/84/0001/4482/verylarge_800x800.jpeg", rel: "lightbox[gallery]", title: "verylarge"}
+                  %img{alt: "verylarge", height: "250", src: "../galleries/84/0001/4482/verylarge_c250x250.jpeg", width: "250"}/
+            .container
+              .thumb
+                %a{href: "../galleries/84/0001/4487/verylarge-5_800x800.jpeg", rel: "lightbox[gallery]", title: "verylarge-5"}
+                  %img{alt: "verylarge-5", height: "250", src: "../galleries/84/0001/4487/verylarge-5_c250x250.jpeg", width: "250"}/
+            .container
+              .thumb
+                %a{href: "../galleries/84/0001/4492/verylarge-1_800x800.jpeg", rel: "lightbox[gallery]", title: "verylarge-1"}
+                  %img{alt: "verylarge-1", height: "250", src: "../galleries/84/0001/4492/verylarge-1_c250x250.jpeg", width: "250"}/
+            .container
+              .thumb
+                %a{href: "../galleries/84/0001/4497/verylarge-2_800x800.jpeg", rel: "lightbox[gallery]", title: "verylarge-2"}
+                  %img{alt: "verylarge-2", height: "250", src: "../galleries/84/0001/4497/verylarge-2_c250x250.jpeg", width: "250"}/
+            .container
+              .thumb
+                %a{href: "../galleries/84/0001/4502/verylarge-3_800x800.jpeg", rel: "lightbox[gallery]", title: "verylarge-3"}
+                  %img{alt: "verylarge-3", height: "250", src: "../galleries/84/0001/4502/verylarge-3_c250x250.jpeg", width: "250"}/
+            .container
+              .thumb
+                %a{href: "../galleries/84/0001/4507/verylarge-4_800x800.jpeg", rel: "lightbox[gallery]", title: "verylarge-4"}
+                  %img{alt: "verylarge-4", height: "250", src: "../galleries/84/0001/4507/verylarge-4_c250x250.jpeg", width: "250"}/
+          %br{style: "clear:both;"}/
+      #sidebar
+        #menu
+          %ul#navigation
+            %li.first
+              %a{href: "../index.html"} Freiämter Sagenweg
+            %li
+              %a{href: "../projektidee/index.html"} Projektidee
+            %li.has_children
+              %a{href: "../sagen/index.html"} Sagen
+            %li
+              %a{href: "../kuenstler/index.html"} Künstler
+            %li.has_children
+              %a{href: "../anreise-situationsplan/index.html"} Anreise
+            %li
+              %a{href: "../fuehrungen/index.html"} Führungen
+            %li.has_children
+              %a{href: "../pressearchiv/index.html"} Pressearchiv
+            %li.current
+              %a{href: "index.html"} Fotoalbum
+            %li
+              %a{href: "../unterrichtsmaterial/index.html"} Unterrichtsmaterial
+            %li
+              %a{href: "../sponsorengnner/index.html"} Sponsoren/Gönner
+            %li
+              %a{href: "../kontakt/index.html"} Kontakt
+        #news
+          %a{href: "../fuehrungen.1.html"}
+            %h3 Jahresprogramm 2014
+          %a.sublime{href: "waldpurgisnacht.html#sagenwegvideo"}
+            %h3 Sagenweg Kurzfilm
+          %a{href: "../assets/627/Prospekt_Sagenweg.pdf"}
+            %h3 Sagenweg Prospekt
+          %h3
+            App für
+            %a{href: "https://itunes.apple.com/us/app/freiaemter-sagenweg/id606774679?mt=8"} iPhone
+            oder
+            %a{href: "https://play.google.com/store/apps/details?id=ch.freiaemtersagenweg.freiaemtersagenwegapp&hl=de"} Android
+    %video#sagenwegvideo{"data-uid" => "0", height: "390", poster: "/assets/647/Sagenweg.jpg", preload: "none", style: "display:none", title: "Freiämter Sagenweg", width: "590"}
+      %source{"data-quality" => "hd", src: "http://s3-eu-west-1.amazonaws.com/extranett-radiant/Sagenweg.mp4"}
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", type: "text/javascript"}
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js", type: "text/javascript"}
+    %script{src: "http://malsup.github.io/min/jquery.cycle2.min.js", type: "text/javascript"}
+    %script{src: "http://malsup.github.io/min/jquery.cycle2.caption.min.js", type: "text/javascript"}
+    %script{src: "../js/slimbox2.js", type: "text/javascript"}
+    :javascript
+      jQuery.noConflict(); jQuery('#accordion').accordion({ heightStyle: "content", active: false });
