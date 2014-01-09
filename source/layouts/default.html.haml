@@ -35,12 +35,12 @@
   %body
     #container
       #header
-      = link_to 'index.html' do
+      = link_to '/index.html' do
         #logo
-      = link_to 'index.html' do
+      = link_to '/index.html' do
         #sagenweg
       #content
-        #page
+        #page{ class: page_classes }
           = yield
 
       #sidebar
@@ -82,10 +82,13 @@
             oder
             %a{href: 'https://play.google.com/store/apps/details?id=ch.freiaemtersagenweg.freiaemtersagenwegapp&hl=de'} Android
 
-    %video#sagenwegvideo{'data-uid' => '0', height: '390', poster: '/assets/647/Sagenweg.jpg', preload: 'none', style: 'display:none', title: 'Freiämter Sagenweg', width: '590'}
-      %source{'data-quality' => 'hd', src: 'http://s3-eu-west-1.amazonaws.com/extranett-radiant/Sagenweg.mp4'}
+    %video#sagenwegvideo{'data-uid' => '0', height: '390', poster: '/images/Sagenweg.jpg', preload: 'none', style: 'display:none', title: 'Freiämter Sagenweg', width: '590'}
+      %source{'data-quality' => 'hd', src: '/videos/Sagenweg.mp4'}
 
-    %script{src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type: 'text/javascript'}
-    %script{src: 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', type: 'text/javascript'}
+    %script{src: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type: 'text/javascript'}
+    %script{src: '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', type: 'text/javascript'}
+    %script{src: '//malsup.github.io/min/jquery.cycle2.min.js', type: 'text/javascript'}
+    %script{src: '//malsup.github.io/min/jquery.cycle2.caption.min.js', type: 'text/javascript'}
+    %script{src: '//cdn.sublimevideo.net/js/z5p3m0es.js', type: 'text/javascript'}
 
     = javascript_include_tag 'application'

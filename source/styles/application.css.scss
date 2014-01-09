@@ -1,3 +1,8 @@
+/*
+ *= require_tree ./plugins
+ *= require_self
+ */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -317,9 +322,6 @@ body.bp {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  .showgrid {
-    background: url('http://www.freiaemtersagenweg.ch/images/grid.png?1261614265');
-  }
   .error {
     padding: .8em;
     margin-bottom: 1em;
@@ -459,7 +461,7 @@ body {
 
 body {
   #header {
-    background: url(../assets/110/background.png);
+    background: url(/images/background.png);
     height: 100px;
     border-bottom-left-radius: 25px;
     -moz-border-radius-bottomleft: 25px;
@@ -472,7 +474,7 @@ body {
     position: absolute;
     top: 5px;
     left: 5px;
-    background: url(../assets/111/logo.png);
+    background: url(/images/logo.png);
     width: 473px;
     height: 85px;
   }
@@ -480,7 +482,7 @@ body {
     position: absolute;
     top: 10px;
     left: 570px;
-    background: url(../assets/112/sagenweg.png);
+    background: url(/images/sagenweg.png);
     width: 204px;
     height: 200px;
     z-index: 9998;
@@ -686,7 +688,7 @@ body #content #page {
     margin-top: 8px;
     padding-left: 30px;
     padding-top: 0px;
-    background: url(../assets/114/bullet.png) no-repeat;
+    background: url(/images/bullet.png) no-repeat;
     &:hover {
       color: #97c041;
     }
@@ -710,7 +712,7 @@ body #content #page {
     font-style: italic;
   }
   a {
-    background: url(../assets/116/arrow.png) 2px 4px no-repeat;
+    background: url(/images/arrow.png) 2px 4px no-repeat;
     padding-left: 20px;
     padding-top: 2px;
     &.noarrow {
@@ -718,7 +720,7 @@ body #content #page {
       padding-left: 0px;
     }
     &.arrow {
-      background: url(../assets/116/arrow.png) 2px 4px no-repeat;
+      background: url(/images/arrow.png) 2px 4px no-repeat;
       padding-left: 20px;
       padding-top: 2px;
     }

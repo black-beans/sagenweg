@@ -50,6 +50,21 @@ page 'sitemap.xml', layout: false
 #   end
 # end
 
+helpers do
+  def nav_link(name, url, opts={})
+    opts[:class] = 'current' if current?(url)
+    link_to(name, url, opts)
+  end
+
+  def current?(url)
+    exact_url = url_for(url)
+    base_path = File.dirname(exact_url)
+    base_file = File.basename(exact_url, '.*')
+    path = Pathname.new(base_path + File::SEPARATOR + base_file).cleanpath.to_s
+    path == '/' ? current_resource.url == path : current_resource.url.start_with?(path)
+  end
+end
+
 set :css_dir, 'styles'
 
 set :js_dir, 'scripts'

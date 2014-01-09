@@ -1,0 +1,189 @@
+---
+layout: 'default'
+title: 'Unser Kontakt'
+---
+
+%h1
+  Unser Kontakt
+
+.accountable
+  %strong Erlebnis Freiamt
+  %br/
+  %em c/o Muri Info
+  %br/
+  Marktstrasse 12
+  %br/
+  5630 Muri
+  %br/
+  %br/
+  056 664 70 11
+  %br/
+  %a{href: 'mailto:info@freiamt.ch'} info@freiamt.ch
+  %br/
+  %a{href: 'http://www.freiamt.ch'} www.freiamt.ch
+
+%br{style: 'clear:both;'}/
+%br{style: 'clear:both;'}/
+
+
+%p
+  Für allfällige ergänzende Fragen stehen wir Ihnen gerne zur Verfügung.
+
+.accountable
+  %strong Rafael Häfliger
+  %br/
+  %em Bildhauer
+  %br/
+  Hofmattenweg 9
+  %br/
+  5610 Wohlen
+  %br/
+  %br/
+  076 346 56 35
+  %br/
+  %a{href: 'mailto:steinkultur@hotmail.com'} steinkultur@hotmail.com
+  %br/
+  %a{href: 'http://www.thewayofthestone.ch'} www.thewayofthestone.ch
+
+.accountable
+  %strong Alex Schaufelbühl
+  %br/
+  %em Bildhauer
+  %br/
+  Gnadenthal
+  %br/
+  5524 Niederwil
+  %br/
+  %br/
+  079 824 42 90
+  %br/
+  %a{href: 'mailto:info@alexschaufelbuehl.ch'} info@alexschaufelbuehl.ch
+  %br/
+  %a{href: 'http://www.alexschaufelbuehl.ch'} www.alexschaufelbuehl.ch
+
+%br{style: 'clear:both;'}/
+%br{style: 'clear:both;'}/
+
+%h3 Kontaktformular
+%p Alle Felder mit einem * werden benötigt.
+
+/ Start Code dw-Formgenerator
+:javascript
+  var tv=-1;
+  window.onLoad=page_tv();
+  function rest(a,b,c,d) {
+   var keyCode = d.keyCode ? d.keyCode : d.which ? d.which : d.charCode;
+   if (keyCode == 38 || keyCode == 40)
+    return;
+   r = (b - a.value.length);
+   if (r < 0)
+    r = 0;
+   if ( (e = document.getElementById(c)) != null)
+    e.innerHTML = r;
+   if (a.value.length > b)
+    a.value = a.value.substr(0,b);
+  }
+  function page_tv() {
+   tv++;
+   window.setTimeout('page_tv()', 1000);
+  }
+  function check_form(f,g) {
+   if (f.elements['sender_name'].value == '') {
+    alert('Bitte geben Sie ihren Namen ein.');
+    f.elements['sender_name'].focus();
+    return false;
+   }
+   if (f.elements['sender_street'].value == '') {
+    alert('Bitte geben Sie ihren Namen ein.');
+    f.elements['sender_street'].focus();
+    return false;
+   }
+   if (f.elements['sender_city'].value == '') {
+    alert('Bitte geben Sie ihre Postleitzahl und den Ort ein.');
+    f.elements['sender_city'].focus();
+    return false;
+   }
+   if (f.elements['sender_email'].value == '') {
+    alert('Bitte geben Sie ihre E-Mail ein.');
+    f.elements['sender_email'].focus();
+    return false;
+   }
+   if (f.elements['sender_phone'].value == '') {
+    alert('Bitte geben Sie ihre Telefonnummer ein.');
+    f.elements['sender_phone'].focus();
+    return false;
+   }
+   if (f.elements['sender_message'].value == '') {
+    alert('Bitte geben Sie eine Nachricht ein.');
+    f.elements['sender_message'].focus();
+    return false;
+   }
+   if (navigator.appName=='Microsoft Internet Explorer') {
+    for (i=0;i<f.length;i++) {
+     var e=f.elements[i];
+     if (e.type == 'submit' || e.type == 'reset')
+      e.disabled=true;
+    }
+   }
+   if (f.elements['page_tv']) {
+    f.elements['page_tv'].value = tv;
+   }
+   return true;
+  }
+
+%form{action: 'http://www.dw-formmailer.de/cgi-bin/dwmailer/dwmailer.pl', enctype: 'multipart/form-data', method: 'post', name: 'dwmailer', onsubmit: 'return check_form(this);'}
+  %input{name: 'page_tv', type: 'hidden', value: ''}/
+  %input{name: 'page_tv_2', type: 'hidden', value: 'äöü'}/
+  %input{name: 'required', type: 'hidden', value: 'sender_name,sender_street,sender_city,sender_email,sender_phone,sender_message'}/
+  %input{name: 'recipient', type: 'hidden', value: 'aW5mb0BmcmVpYW10LmNo'}/
+  %input{name: 'language', type: 'hidden', value: 'en'}/
+  %input{name: 'page_background_color', type: 'hidden', value: '#000000'}/
+  %input{name: 'page_font_color', type: 'hidden', value: '#ffffff'}/
+  %table.table{align: 'center', border: '0', cellpadding: '3', cellspacing: '1'}
+    %tr
+      %td.main{width: '30%'}
+        .align Name*
+      %td.main
+        %input.input{maxlength: '100', name: 'sender_name', size: '40', type: 'text'}/
+    %tr
+      %td.main{width: '30%'}
+        .align Strasse*
+      %td.main
+        %input.input{maxlength: '100', name: 'sender_street', size: '40', type: 'text'}/
+    %tr
+      %td.main{width: '30%'}
+        .align PLZ, Ort*
+      %td.main
+        %input.input{maxlength: '100', name: 'sender_city', size: '40', type: 'text'}/
+    %tr
+      %td.main{width: '30%'}
+        .align E-Mail*
+      %td.main
+        %input.input{maxlength: '100', name: 'sender_email', size: '40', type: 'text'}/
+    %tr
+      %td.main{width: '30%'}
+        .align Telefonnummer*
+      %td.main
+        %input.input{maxlength: '100', name: 'sender_phone', size: '40', type: 'text'}/
+    %tr
+      %td.main{width: '30%'}
+        .align Betreff
+      %td.main
+        %input.input{maxlength: '100', name: 'sender_subject', size: '40', type: 'text'}/
+    %tr
+      %td.main{width: '30%'}
+        .align Nachricht*
+      %td.main
+        %textarea#sender_message.textarea{cols: '40', name: 'sender_message', onchange: "rest(this,2500,'count_1',event)", onkeydown: "rest(this,2500,'count_1',event)", onkeyup: "rest(this,2500,'count_1',event)", rows: '10'}
+        %br/
+        %i
+          Anzahl verbleibende Zeichen:
+          %span#count_1 2500
+    %tr
+      %td.foot{align: 'center', colspan: '2', height: '25', width: '100%'}
+        %input.button{type: 'submit', value: 'Nachricht versenden'}/
+
+%p{align: 'center'}
+  %span{style: 'font-size:9px;font-family:Verdana,sans-serif;'}
+    %a.noarrow{href: 'https://www.dw-formmailer.de', target: '_blank'} dw-FormGenerator 5.3.2
+/ End Code dw-Formgenerator
