@@ -960,8 +960,8 @@ img.sage, canvas.sage, img.artist, canvas.artist {
     td {
       padding: 5px;
 
-      &:first-child {
-        width: 115px;
+      &.nowrap {
+        white-space: nowrap;
       }
     }
   }
