@@ -832,9 +832,9 @@ body #content #page {
     }
 
     &.arrow {
-      background: url(/images/arrow.png) 2px 4px no-repeat;
-      padding-left: 20px;
-      padding-top: 2px;
+      background: url(/images/arrow.png) 2px 4px no-repeat !important;
+      padding-left: 20px !important;
+      padding-top: 2px !important;
     }
   }
 
