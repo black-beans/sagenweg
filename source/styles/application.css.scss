@@ -695,6 +695,22 @@ body {
     width: 630px;
     color: white;
   }
+
+  #footer {
+    margin: 50px 0 25px 0;
+    border-top: 1px solid #222;
+    width: 950px;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+  }
 }
 
 * html body #content {
@@ -841,22 +857,6 @@ body #content #page {
   &.fotoalbum a {
     background: none;
     padding-left: 0;
-  }
-}
-
-#footer {
-  margin-top: 10px;
-  margin-left: 35px;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 12px;
-
-  a {
-    color: #aaaaaa;
-  }
-
-  img {
-    margin-top: 10px;
   }
 }
 

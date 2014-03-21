@@ -42,7 +42,6 @@
       #content
         #page{ class: page_classes }
           = yield
-
       #sidebar
         #menu
           %ul#navigation
@@ -83,6 +82,12 @@
             %a{href: 'https://itunes.apple.com/us/app/freiaemter-sagenweg/id606774679?mt=8'} iPhone
             oder
             %a{href: 'https://play.google.com/store/apps/details?id=ch.freiaemtersagenweg.freiaemtersagenwegapp&hl=de'} Android
+
+      #footer
+        &copy; Copyright 2014 Freiämter Sagenweg.
+
+        %a{ href: 'http://www.flinkfinger.com' }
+          Webentwicklung von FlinkFinger GmbH, Bremgarten.
 
     %video#sagenwegvideo{'data-uid' => '0', height: '390', poster: '/images/Sagenweg.jpg', preload: 'none', style: 'display:none', title: 'Freiämter Sagenweg', width: '590'}
       %source{'data-quality' => 'hd', src: '/videos/Sagenweg.mp4'}
