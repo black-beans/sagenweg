@@ -102,3 +102,5 @@ activate :s3_sync do |s3_sync|
   s3_sync.bucket = 'www.freiaemtersagenweg.ch'
   s3_sync.region = 'eu-west-1'
 end
+
+activate :sitemap, :hostname => "http://www.freiaemtersagenweg.ch"

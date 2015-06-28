@@ -86,6 +86,8 @@ GEM
       pmap
       ruby-progressbar
       unf
+    middleman-sitemap (0.0.13)
+      middleman-core (>= 3.2.2)
     middleman-sprockets (3.3.1)
       middleman-core (>= 3.2)
       sprockets (~> 2.1)
@@ -139,4 +141,5 @@ DEPENDENCIES
   middleman
   middleman-livereload
   middleman-s3_sync
+  middleman-sitemap
   middleman-sprockets
