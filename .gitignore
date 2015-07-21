@@ -6,3 +6,4 @@ Thumbs.db
 deploy
 .s3_sync
 .cache
+.DS_Store
